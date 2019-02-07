@@ -1,6 +1,25 @@
 {
 	"comment": "",
 	"ignore": "test",
-	"package": [],
+	"package": [
+		{
+			"checksumSHA1": "EiCCe920mQy/YqANfTUe8WBCGV8=",
+			"path": "github.com/gorilla/handlers",
+			"revision": "7e6a874cdc0efb71a260254cc0e30d5415b6a5bb",
+			"revisionTime": "2018-12-12T23:28:18Z"
+		},
+		{
+			"checksumSHA1": "j1+RNnyQLkiyGJmO0KZsDp3pykc=",
+			"path": "github.com/gorilla/mux",
+			"revision": "a7962380ca08b5a188038c69871b8d3fbdf31e89",
+			"revisionTime": "2019-01-25T16:05:53Z"
+		},
+		{
+			"checksumSHA1": "h5es1TGOiAnuUe/mGw5T9MpzdG4=",
+			"path": "github.com/juju/loggo",
+			"revision": "584905176618da46b895b176c721b02c476b6993",
+			"revisionTime": "2018-05-24T02:20:52Z"
+		}
+	],
 	"rootPath": "BackPi"
 }
