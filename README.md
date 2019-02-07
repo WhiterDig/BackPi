@@ -1,6 +1,6 @@
 # BackPi
 
-When installing this package make sure to run a 
+Before using this application, cd to the project directory and run a 
 
 ```
 go get -u github.com/kardianos/govendor
