@@ -1,10 +1,10 @@
 package main
 
 import (
-	"awesomeProject/global"
-	"awesomeProject/repository"
-	"awesomeProject/router"
-	"awesomeProject/service"
+	"BackPi/global"
+	"BackPi/repository"
+	"BackPi/router"
+	"BackPi/service"
 	"context"
 	"fmt"
 	"github.com/gorilla/handlers"

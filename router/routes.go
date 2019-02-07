@@ -1,7 +1,7 @@
 package router
 
 import (
-	"awesomeProject/router/handlers"
+	"BackPi/router/handlers"
 	"context"
 	"net/http"
 )

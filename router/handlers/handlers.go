@@ -1,9 +1,9 @@
 package handlers
 
 import (
-	"awesomeProject/global"
-	"awesomeProject/model"
-	"awesomeProject/service"
+	"BackPi/global"
+	"BackPi/model"
+	"BackPi/service"
 	"context"
 	"encoding/json"
 	"flag"

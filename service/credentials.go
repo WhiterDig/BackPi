@@ -1,7 +1,7 @@
 package service
 
 import (
-	"awesomeProject/repository"
+	"BackPi/repository"
 	"context"
 )
 
