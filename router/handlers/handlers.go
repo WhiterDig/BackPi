@@ -20,7 +20,7 @@ func DoThings(ctx context.Context) http.HandlerFunc {
 		incomingBody.Decode(&creds)
 
 		fmt.Println("*****user******", creds.SSID)
-		resp, err := ctx.Value(global.CredentialService).(service.Credential).WriteToFile(creds.SSID, creds.Password)
+		resp, err := ctx.Value(global.CredentialService).(service.Credential).WriteToFile(creds.SSID, creds.Password, creds.Email)
 		if err != nil {
 			http.Error(w, fmt.Sprint(err), http.StatusInternalServerError)
 		}

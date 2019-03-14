@@ -6,7 +6,7 @@ import (
 )
 
 type Credential interface {
-	WriteToFile(user string, pass string) (*string, error)
+	WriteToFile(user string, pass string, email string) (*string, error)
 }
 
 type credential struct {
@@ -19,14 +19,14 @@ func NewCredentialRepo(ctx context.Context) *credential {
 	}
 }
 
-func (cd *credential) WriteToFile(user string, pass string) (*string, error) {
+func (cd *credential) WriteToFile(user string, pass string, email string) (*string, error) {
 	status := "success"
-	file, err := os.Create("text.txt")
+	file, err := os.Create("wpa_supplicant.conf")
 	if err != nil {
 		return nil, err
 	}
 	defer file.Close()
-	file.WriteString("ssid: " + user + " password: " + pass)
+	file.WriteString("ssid: " + user + " password: " + pass + " email: " + email)
 
 	return &status, nil
 }

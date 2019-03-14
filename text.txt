@@ -1,1 +1,1 @@
-ssid: adsddasdadasdasasdasasas password: chimken nuggets
+ssid: WiFi_Name password: Password
