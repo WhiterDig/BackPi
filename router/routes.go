@@ -18,10 +18,10 @@ type route struct {
 func Routes(ctx context.Context) []route {
 	return []route{
 		{
-			Name:        "DoThings",
+			Name:        "SaveCredential",
 			Method:      http.MethodPost,
 			Pattern:     path,
-			HandlerFunc: handlers.DoThings(ctx),
+			HandlerFunc: handlers.SaveCredential(ctx),
 		},
 	}
 }

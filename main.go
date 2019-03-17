@@ -19,10 +19,11 @@ var (
 
 func init() {
 	l.SetLogLevel(loggo.DEBUG)
-
-	cred := repository.NewCredentialRepo(ctx)
-
-	ctx = context.WithValue(ctx, global.CredentialService, service.NewCredential(ctx, cred))
+	//Create Repository
+	cred := repository.NewCredentialRepo(ctx, l)
+	//Create Service
+	serv := service.NewCredential(ctx, cred, l)
+	ctx = context.WithValue(ctx, global.CredentialService, serv)
 }
 
 func main() {
@@ -32,5 +33,4 @@ func main() {
 	allowedMethods := handlers.AllowedMethods([]string{"POST"})
 	router := router.NewRouter(ctx)
 	l.Criticalf(http.ListenAndServe(":8080", handlers.CORS(allowedOrigins, allowedMethods, allowedHeaders)(router)).Error())
-	//l.Criticalf(http.ListenAndServe(":8080", router).Error())
 }
